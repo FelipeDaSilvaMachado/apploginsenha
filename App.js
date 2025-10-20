@@ -2,23 +2,23 @@ import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
-import SplashScreen from './componentes/SplashScreen';
-import Home from './componentes/Home';
 import Login from './componentes/Login';
+import Home from './componentes/Home';
 import Perfil from './componentes/Perfil';
-import Registro from './componentes/Registro';
+import SplashScreen from './componentes/SplashScreen';
+import Cadastro from './componentes/Cadastro';
 
 const Stack = createStackNavigator();
 
-export default function Rotas() {
+export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator initialRouteName="SplashScreen">
         <Stack.Screen name="SplashScreen" component={SplashScreen} options={{ headerShown: false }} />
-        <Stack.Screen name="Home" component={Home} options={{ title: 'Seja bem vindo ao\nDiário de Obras', headerLeft: () => null }} />
         <Stack.Screen name="Login" component={Login} options={{ headerShown: false }} />
+        <Stack.Screen name="Cadastro" component={Cadastro} options={{ title: 'Cadastre-se' }} />
+        <Stack.Screen name="Home" component={Home} options={{ title: 'Diário de Obras', headerLeft: () => null }} />
         <Stack.Screen name="Perfil" component={Perfil} options={{ title: 'Perfil' }} />
-        <Stack.Screen name="Registro" component={Registro} /> {/* options={{ title: 'Cadastre-se' }} */}
       </Stack.Navigator>
     </NavigationContainer>
   );
