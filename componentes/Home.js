@@ -13,7 +13,7 @@ const Home = ({ navigation }) => {
       />
       <Button
         title="Cadastre-se"
-        onPress={() => navigation.replace('Login')}
+        onPress={() => navigation.replace('Cadastro')}
       />
     </View>
   );
